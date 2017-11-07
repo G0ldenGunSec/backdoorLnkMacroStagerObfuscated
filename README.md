@@ -9,6 +9,6 @@ On run, the macro will search the user's desktop looking for any .lnk files (sho
 
 The two-step approach is done to defeat application-aware security measures that flag on launches of powershell from unexpected programs, such as a direct launch from office applications. As the macro is pure vbscript and does not leverage powershell it is less likely to be detected by these types of tools.  Obfuscation of the macro is done to evade antivirus.
 
-Usage: Drop backdoorLnkMacroObfuscated.py into rootEmpireFolder/lib/stagers/windows and start empire, the stager should now show up in your stagers list (usestager windows/backdoorLnkMacro.py)
+Usage: Drop backdoorLnkMacroObfuscated.py into rootEmpireFolder/lib/stagers/windows and start empire, the stager should now show up in your stagers list (usestager windows/backdoorLnkMacroObfuscated.py)
 
 Upon execution of the stager a macro file and an xml file will be generated, ensure the xml is located on the webserver configured during setup of the stager and that this is a location accessible on the remote system.
