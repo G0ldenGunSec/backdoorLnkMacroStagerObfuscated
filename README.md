@@ -7,7 +7,8 @@ This is a two-step attack vector, the initial macro that a user runs will config
 
 On run, the macro will search the user's desktop looking for any .lnk files (shortcuts) that match target executables as defined during generation of the macro.  Typical use-cases focus on highly-utilized shortcuts (iexplore, chrome, firefox, etc.)
 
-The two-step approach is done to defeat application-aware security measures that flag on launches of powershell from unexpected programs, such as a direct launch from office applications. As the macro is pure vbscript and does not leverage powershell it is less likely to be detected by these types of tools.  Obfuscation of the macro is done to evade antivirus.
+The two-step approach is done to defeat application-aware security measures that flag on launches of powershell from unexpected programs, such as a direct launch from office applications. As the macro is pure VBA and does not leverage powershell or spawn any child processes it is less likely to be detected by these types of tools.  Moreover, modifications made by the macro should not require administrative rights on the endpoint.  Obfuscation of the macro is done to evade antivirus.  The macro is currently configured as an Auto_Close() for some basic sandbox evasion, feel free to change to a different execution method as needed.
+
 
 Usage: Drop backdoorLnkMacroObfuscated.py into rootEmpireFolder/lib/stagers/windows and start empire, the stager should now show up in your stagers list (usestager windows/backdoorLnkMacroObfuscated.py)
 
